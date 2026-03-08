@@ -1,0 +1,134 @@
+name: USBToggle
+options:
+  minimumXcodeGenVersion: 2.44.0
+  deploymentTarget:
+    macOS: "13.0"
+settings:
+  base:
+    SWIFT_VERSION: 6.0
+    MACOSX_DEPLOYMENT_TARGET: "13.0"
+    CLANG_ENABLE_MODULES: YES
+    ENABLE_USER_SCRIPT_SANDBOXING: NO
+    CODE_SIGN_STYLE: Automatic
+targets:
+  USBToggleShared:
+    type: library.static
+    platform: macOS
+    sources:
+      - path: Shared
+    dependencies:
+      - sdk: IOKit.framework
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.parker.usbtoggle.shared
+        PRODUCT_NAME: USBToggleShared
+        DEFINES_MODULE: YES
+
+  USBToggleHelper:
+    type: tool
+    platform: macOS
+    sources:
+      - path: Helper
+        excludes:
+          - Info.plist
+          - BridgingHeader.h
+    dependencies:
+      - target: USBToggleShared
+      - sdk: IOKit.framework
+    settings:
+      base:
+        PRODUCT_NAME: USBToggleHelper
+        PRODUCT_BUNDLE_IDENTIFIER: com.parker.usbtoggle.helper
+        GENERATE_INFOPLIST_FILE: NO
+        INFOPLIST_FILE: Helper/Info.plist
+        SWIFT_OBJC_BRIDGING_HEADER: Helper/BridgingHeader.h
+        OTHER_CODE_SIGN_FLAGS: "--identifier com.parker.usbtoggle.helper"
+
+  USBToggleApp:
+    type: application
+    platform: macOS
+    sources:
+      - path: App
+        excludes:
+          - Info.plist
+    dependencies:
+      - target: USBToggleShared
+      - target: USBToggleHelper
+        link: false
+        embed: false
+      - sdk: ServiceManagement.framework
+      - sdk: AppKit.framework
+    settings:
+      base:
+        PRODUCT_NAME: USB Toggle
+        PRODUCT_MODULE_NAME: USBToggleApp
+        PRODUCT_BUNDLE_IDENTIFIER: com.parker.usbtoggle
+        GENERATE_INFOPLIST_FILE: NO
+        INFOPLIST_FILE: App/Info.plist
+    postBuildScripts:
+      - name: Embed Helper and LaunchDaemon
+        inputFiles:
+          - $(BUILT_PRODUCTS_DIR)/USBToggleHelper
+          - $(PROJECT_DIR)/LaunchDaemons/com.parker.usbtoggle.helper.plist
+        outputFiles:
+          - $(TARGET_BUILD_DIR)/$(FULL_PRODUCT_NAME)/Contents/Library/HelperTools/USBToggleHelper
+          - $(TARGET_BUILD_DIR)/$(FULL_PRODUCT_NAME)/Contents/Library/LaunchDaemons/com.parker.usbtoggle.helper.plist
+        script: |
+          set -euo pipefail
+          APP_BUNDLE="$TARGET_BUILD_DIR/$FULL_PRODUCT_NAME"
+          HELPER_DST="$APP_BUNDLE/Contents/Library/HelperTools"
+          DAEMON_DST="$APP_BUNDLE/Contents/Library/LaunchDaemons"
+          mkdir -p "$HELPER_DST" "$DAEMON_DST"
+          cp "$BUILT_PRODUCTS_DIR/USBToggleHelper" "$HELPER_DST/USBToggleHelper"
+          chmod 755 "$HELPER_DST/USBToggleHelper"
+          cp "$PROJECT_DIR/LaunchDaemons/com.parker.usbtoggle.helper.plist" "$DAEMON_DST/com.parker.usbtoggle.helper.plist"
+          /usr/bin/plutil -lint "$DAEMON_DST/com.parker.usbtoggle.helper.plist"
+
+  SharedTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - path: Tests/SharedTests
+    dependencies:
+      - target: USBToggleShared
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+
+  HelperTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - path: Tests/HelperTests
+    dependencies:
+      - target: USBToggleShared
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+
+  AppTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - path: Tests/AppTests
+    dependencies:
+      - target: USBToggleShared
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_HOST: ""
+        BUNDLE_LOADER: ""
+
+schemes:
+  USBToggle:
+    build:
+      targets:
+        USBToggleApp: all
+        USBToggleHelper: all
+        USBToggleShared: all
+    test:
+      gatherCoverageData: false
+      targets:
+        - SharedTests
+        - HelperTests
+        - AppTests

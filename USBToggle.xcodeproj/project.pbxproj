@@ -1,0 +1,1025 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0AE2F150BC54C85B8E053DDF /* USBRiskClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045532BCA2CDE89DE3F994E4 /* USBRiskClass.swift */; };
+		0DAB8F29F8B277A0A319FF4E /* AppMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2435A969C97D3D78E9A51D5F /* AppMenuView.swift */; };
+		0DB5C96B380BB0E2DFB815D7 /* USBLowLevel.c in Sources */ = {isa = PBXBuildFile; fileRef = CF6ED6FE5D76D680A1D9FA1A /* USBLowLevel.c */; };
+		260E2B1EE9011FE68CE69A72 /* libUSBToggleShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 50083D03C4B9F6ADF1C82DAB /* libUSBToggleShared.a */; };
+		3349D9BFCC7EF726DB1C117E /* libUSBToggleShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 50083D03C4B9F6ADF1C82DAB /* libUSBToggleShared.a */; };
+		565C07787D6C1DEAF77F416C /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F17E728AECF8A38D5161A7C /* AppKit.framework */; };
+		57D755E8CA37B35607854E63 /* USBDeviceRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22EE2869CC3E3A898FE4D68 /* USBDeviceRecord.swift */; };
+		5A6803B27AA20864BB837B42 /* USBDeviceSnapshotDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2E58D80E634C9EB72280F2 /* USBDeviceSnapshotDTO.swift */; };
+		5CA152415C3E43839CE17985 /* AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5242006D6BBBCD8703EF1C86 /* AppTests.swift */; };
+		7D0622DA242001A0DF66F1B9 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE09BF692C0D8C1B1BED5128 /* IOKit.framework */; };
+		7FE50FC0B0BC5B22F3BD5DE7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F96461223C7484670E71860 /* main.swift */; };
+		9202EFABBA50AF1D90A181B2 /* HelperInstaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7566C92AB27FBC8CC1838D /* HelperInstaller.swift */; };
+		92CFD436D3A4661DA7763D35 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEF3CF8704249B439818F10D /* ServiceManagement.framework */; };
+		9A365A8BFAF60520F635C09E /* libUSBToggleShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 50083D03C4B9F6ADF1C82DAB /* libUSBToggleShared.a */; };
+		ABA3746106381DAC3451EC25 /* USBToggleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35D43A3701BA21407A5B09A /* USBToggleApp.swift */; };
+		B1AF411801B484519F94AF36 /* USBToggleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBBDD9E2ADACD735983EB34 /* USBToggleViewModel.swift */; };
+		B856105FFBB4B5E30F9B1B17 /* ToggleResultDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1311DA0DB3C3C1C2F234228E /* ToggleResultDTO.swift */; };
+		BB2C9A36AAB2EA3087B0543A /* USBToggleHelperService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF47114DF483CC68BE20CA5C /* USBToggleHelperService.swift */; };
+		BF70B35E777FD520E22F26E5 /* USBToggleErrorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229A81361087B09EAB2880D /* USBToggleErrorCode.swift */; };
+		C087ED88760F61FAA29A1D91 /* USBDeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF3E63C2D714606E7586B4 /* USBDeviceManager.swift */; };
+		C13C61C30CEFE59ACD18C95E /* HelperXPCListenerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB423644197F6278CCF6E1BB /* HelperXPCListenerDelegate.swift */; };
+		C30E7523B6A6DE37462AA211 /* USBPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445B7E6F61B861BC5852B0D9 /* USBPolicy.swift */; };
+		C9A02E50535953EA563CD218 /* USBToggleHelperXPC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196FB749F1A52BF0E8C517C1 /* USBToggleHelperXPC.swift */; };
+		CCB51A21FBC0017CCECCAF39 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE09BF692C0D8C1B1BED5128 /* IOKit.framework */; };
+		D9DB8369ADF5FC0092098F54 /* libUSBToggleShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 50083D03C4B9F6ADF1C82DAB /* libUSBToggleShared.a */; };
+		E161F1FC4E45DCBAE603DF36 /* USBToggleHelperClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45EAA80202C55392B794C61A /* USBToggleHelperClient.swift */; };
+		E1A11B31AE7DBD42C284842B /* XPCInterfaceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C30BC20F1625340F7ED3F9 /* XPCInterfaceFactory.swift */; };
+		E931BAC77BE71AADF73F4800 /* USBToggleConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9370E69D7155BDB1A0D6CEC5 /* USBToggleConstants.swift */; };
+		ED714619ADDB7B4642F06089 /* libUSBToggleShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 50083D03C4B9F6ADF1C82DAB /* libUSBToggleShared.a */; };
+		F19BFEA0F2EF2C97DA5E178E /* SharedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AEB671CBB6ABA9B49A367C /* SharedTests.swift */; };
+		FE41A6FC414D8567E48B26A0 /* HelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1693F6F48561E92BB94E62B2 /* HelperTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		231809A6BB509D846386F4D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80AAE10B3E0643D4C32F6DA0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C6AD93082198D6A6083ECBC3;
+			remoteInfo = USBToggleHelper;
+		};
+		4F36D512FEC6B021610F40BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80AAE10B3E0643D4C32F6DA0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADE239B4B399BB3486B5678C;
+			remoteInfo = USBToggleShared;
+		};
+		6BCC3072AE5D665514A1D561 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80AAE10B3E0643D4C32F6DA0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADE239B4B399BB3486B5678C;
+			remoteInfo = USBToggleShared;
+		};
+		8B075670C090C5B8C92C73D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80AAE10B3E0643D4C32F6DA0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADE239B4B399BB3486B5678C;
+			remoteInfo = USBToggleShared;
+		};
+		C285105D4C296257673FAA57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80AAE10B3E0643D4C32F6DA0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADE239B4B399BB3486B5678C;
+			remoteInfo = USBToggleShared;
+		};
+		D15A04E76326D465062246CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80AAE10B3E0643D4C32F6DA0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADE239B4B399BB3486B5678C;
+			remoteInfo = USBToggleShared;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0229A81361087B09EAB2880D /* USBToggleErrorCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USBToggleErrorCode.swift; sourceTree = "<group>"; };
+		045532BCA2CDE89DE3F994E4 /* USBRiskClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USBRiskClass.swift; sourceTree = "<group>"; };
+		0F96461223C7484670E71860 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		1311DA0DB3C3C1C2F234228E /* ToggleResultDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleResultDTO.swift; sourceTree = "<group>"; };
+		1693F6F48561E92BB94E62B2 /* HelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperTests.swift; sourceTree = "<group>"; };
+		196FB749F1A52BF0E8C517C1 /* USBToggleHelperXPC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USBToggleHelperXPC.swift; sourceTree = "<group>"; };
+		2435A969C97D3D78E9A51D5F /* AppMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMenuView.swift; sourceTree = "<group>"; };
+		24C30BC20F1625340F7ED3F9 /* XPCInterfaceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPCInterfaceFactory.swift; sourceTree = "<group>"; };
+		3F17E728AECF8A38D5161A7C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		445B7E6F61B861BC5852B0D9 /* USBPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USBPolicy.swift; sourceTree = "<group>"; };
+		45EAA80202C55392B794C61A /* USBToggleHelperClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USBToggleHelperClient.swift; sourceTree = "<group>"; };
+		4EBBDD9E2ADACD735983EB34 /* USBToggleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USBToggleViewModel.swift; sourceTree = "<group>"; };
+		50083D03C4B9F6ADF1C82DAB /* libUSBToggleShared.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUSBToggleShared.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5242006D6BBBCD8703EF1C86 /* AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTests.swift; sourceTree = "<group>"; };
+		9370E69D7155BDB1A0D6CEC5 /* USBToggleConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USBToggleConstants.swift; sourceTree = "<group>"; };
+		A4AA1020FD8BD42C9FDAF7BC /* SharedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6C5C9EA8A69D367FBFAA275 /* USBToggleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = USBToggleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB423644197F6278CCF6E1BB /* HelperXPCListenerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperXPCListenerDelegate.swift; sourceTree = "<group>"; };
+		AE7566C92AB27FBC8CC1838D /* HelperInstaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperInstaller.swift; sourceTree = "<group>"; };
+		AF2E58D80E634C9EB72280F2 /* USBDeviceSnapshotDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USBDeviceSnapshotDTO.swift; sourceTree = "<group>"; };
+		AF47114DF483CC68BE20CA5C /* USBToggleHelperService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USBToggleHelperService.swift; sourceTree = "<group>"; };
+		B4731DD6C15A95654FF2AA9A /* USBToggleHelper */ = {isa = PBXFileReference; includeInIndex = 0; path = USBToggleHelper; sourceTree = BUILT_PRODUCTS_DIR; };
+		B712134058C77BFBB1B9CAA0 /* HelperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEF3CF8704249B439818F10D /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+		C0C3980EE041EB663F60EDF6 /* USBLowLevel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = USBLowLevel.h; sourceTree = "<group>"; };
+		CF6ED6FE5D76D680A1D9FA1A /* USBLowLevel.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = USBLowLevel.c; sourceTree = "<group>"; };
+		DE09BF692C0D8C1B1BED5128 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		E1DF3E63C2D714606E7586B4 /* USBDeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USBDeviceManager.swift; sourceTree = "<group>"; };
+		E22EE2869CC3E3A898FE4D68 /* USBDeviceRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USBDeviceRecord.swift; sourceTree = "<group>"; };
+		E35D43A3701BA21407A5B09A /* USBToggleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USBToggleApp.swift; sourceTree = "<group>"; };
+		F3AEB671CBB6ABA9B49A367C /* SharedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTests.swift; sourceTree = "<group>"; };
+		FBC607B8AB22E0B54949E914 /* AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0024BA45E02B88448A9EC340 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A365A8BFAF60520F635C09E /* libUSBToggleShared.a in Frameworks */,
+				92CFD436D3A4661DA7763D35 /* ServiceManagement.framework in Frameworks */,
+				565C07787D6C1DEAF77F416C /* AppKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		008B8A9142E5255958A7721F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCB51A21FBC0017CCECCAF39 /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		378E1C7AC6E9C338B57A9059 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9DB8369ADF5FC0092098F54 /* libUSBToggleShared.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E9FF211FE0B5BF12BC3F025 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3349D9BFCC7EF726DB1C117E /* libUSBToggleShared.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0D7B1B57500783FCCB9A02E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED714619ADDB7B4642F06089 /* libUSBToggleShared.a in Frameworks */,
+				7D0622DA242001A0DF66F1B9 /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C26E281CE40E6538FE28D177 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				260E2B1EE9011FE68CE69A72 /* libUSBToggleShared.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		12BF466AB87809A68547111F = {
+			isa = PBXGroup;
+			children = (
+				8C935AE2DDDAEF1AB16FB555 /* App */,
+				6DBC6666A89E80A12B54BEA7 /* AppTests */,
+				DB0BAEED32F0E0C665B47489 /* Helper */,
+				2AD38B0F7098CEA9028806CD /* HelperTests */,
+				186CB7DF7E68093526B5FEE4 /* Shared */,
+				70349B411BB20BC7E95CA9E7 /* SharedTests */,
+				DA50D07A11F2B53F0477168A /* Frameworks */,
+				6536334C05321DF715D05E04 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		186CB7DF7E68093526B5FEE4 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				1311DA0DB3C3C1C2F234228E /* ToggleResultDTO.swift */,
+				AF2E58D80E634C9EB72280F2 /* USBDeviceSnapshotDTO.swift */,
+				445B7E6F61B861BC5852B0D9 /* USBPolicy.swift */,
+				045532BCA2CDE89DE3F994E4 /* USBRiskClass.swift */,
+				9370E69D7155BDB1A0D6CEC5 /* USBToggleConstants.swift */,
+				0229A81361087B09EAB2880D /* USBToggleErrorCode.swift */,
+				196FB749F1A52BF0E8C517C1 /* USBToggleHelperXPC.swift */,
+				24C30BC20F1625340F7ED3F9 /* XPCInterfaceFactory.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		2AD38B0F7098CEA9028806CD /* HelperTests */ = {
+			isa = PBXGroup;
+			children = (
+				1693F6F48561E92BB94E62B2 /* HelperTests.swift */,
+			);
+			name = HelperTests;
+			path = Tests/HelperTests;
+			sourceTree = "<group>";
+		};
+		6536334C05321DF715D05E04 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FBC607B8AB22E0B54949E914 /* AppTests.xctest */,
+				B712134058C77BFBB1B9CAA0 /* HelperTests.xctest */,
+				50083D03C4B9F6ADF1C82DAB /* libUSBToggleShared.a */,
+				A4AA1020FD8BD42C9FDAF7BC /* SharedTests.xctest */,
+				A6C5C9EA8A69D367FBFAA275 /* USBToggleApp.app */,
+				B4731DD6C15A95654FF2AA9A /* USBToggleHelper */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6DBC6666A89E80A12B54BEA7 /* AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				5242006D6BBBCD8703EF1C86 /* AppTests.swift */,
+			);
+			name = AppTests;
+			path = Tests/AppTests;
+			sourceTree = "<group>";
+		};
+		70349B411BB20BC7E95CA9E7 /* SharedTests */ = {
+			isa = PBXGroup;
+			children = (
+				F3AEB671CBB6ABA9B49A367C /* SharedTests.swift */,
+			);
+			name = SharedTests;
+			path = Tests/SharedTests;
+			sourceTree = "<group>";
+		};
+		8C935AE2DDDAEF1AB16FB555 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2435A969C97D3D78E9A51D5F /* AppMenuView.swift */,
+				AE7566C92AB27FBC8CC1838D /* HelperInstaller.swift */,
+				E35D43A3701BA21407A5B09A /* USBToggleApp.swift */,
+				45EAA80202C55392B794C61A /* USBToggleHelperClient.swift */,
+				4EBBDD9E2ADACD735983EB34 /* USBToggleViewModel.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		DA50D07A11F2B53F0477168A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F17E728AECF8A38D5161A7C /* AppKit.framework */,
+				DE09BF692C0D8C1B1BED5128 /* IOKit.framework */,
+				BEF3CF8704249B439818F10D /* ServiceManagement.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB0BAEED32F0E0C665B47489 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				AB423644197F6278CCF6E1BB /* HelperXPCListenerDelegate.swift */,
+				0F96461223C7484670E71860 /* main.swift */,
+				E1DF3E63C2D714606E7586B4 /* USBDeviceManager.swift */,
+				E22EE2869CC3E3A898FE4D68 /* USBDeviceRecord.swift */,
+				CF6ED6FE5D76D680A1D9FA1A /* USBLowLevel.c */,
+				C0C3980EE041EB663F60EDF6 /* USBLowLevel.h */,
+				AF47114DF483CC68BE20CA5C /* USBToggleHelperService.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		06B0EBDA24A678A9648A53FA /* AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 949B1218DF2277CBA1C3424D /* Build configuration list for PBXNativeTarget "AppTests" */;
+			buildPhases = (
+				0D4380EEF659A21B097A2433 /* Sources */,
+				5E9FF211FE0B5BF12BC3F025 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4087C71D7F6238BE15EFD119 /* PBXTargetDependency */,
+			);
+			name = AppTests;
+			packageProductDependencies = (
+			);
+			productName = AppTests;
+			productReference = FBC607B8AB22E0B54949E914 /* AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		083BB46C35571CD6BCC0A3B1 /* HelperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA5E8D28A160766CE98FCF0B /* Build configuration list for PBXNativeTarget "HelperTests" */;
+			buildPhases = (
+				98EAB804C0426B49DDDECA37 /* Sources */,
+				C26E281CE40E6538FE28D177 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A409D18F40051CE1679F81DE /* PBXTargetDependency */,
+			);
+			name = HelperTests;
+			packageProductDependencies = (
+			);
+			productName = HelperTests;
+			productReference = B712134058C77BFBB1B9CAA0 /* HelperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5ED7FEB918FE9DA0D1ABDB18 /* SharedTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93893009C90275CE0981CCF4 /* Build configuration list for PBXNativeTarget "SharedTests" */;
+			buildPhases = (
+				1679EC82B0F10087ABC01C9E /* Sources */,
+				378E1C7AC6E9C338B57A9059 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2614F72DA570FD1A7AF76753 /* PBXTargetDependency */,
+			);
+			name = SharedTests;
+			packageProductDependencies = (
+			);
+			productName = SharedTests;
+			productReference = A4AA1020FD8BD42C9FDAF7BC /* SharedTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		65B84EC0089BDAAB840E02BE /* USBToggleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E779C8779D58A2158531AF3 /* Build configuration list for PBXNativeTarget "USBToggleApp" */;
+			buildPhases = (
+				7F1606CD4718746440E7E667 /* Sources */,
+				0024BA45E02B88448A9EC340 /* Frameworks */,
+				5891EE8FBA47818CFD105066 /* Embed Helper and LaunchDaemon */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				826B0F6734BDF26EF1C63655 /* PBXTargetDependency */,
+				C25BC519D1733104D5A4196D /* PBXTargetDependency */,
+			);
+			name = USBToggleApp;
+			packageProductDependencies = (
+			);
+			productName = USBToggleApp;
+			productReference = A6C5C9EA8A69D367FBFAA275 /* USBToggleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ADE239B4B399BB3486B5678C /* USBToggleShared */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6F8C64A149D1003F6B470A9 /* Build configuration list for PBXNativeTarget "USBToggleShared" */;
+			buildPhases = (
+				E4F70516F008BB3D5536D85D /* Sources */,
+				F15320960106D28306FC1DB9 /* Copy Swift Objective-C Interface Header */,
+				008B8A9142E5255958A7721F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = USBToggleShared;
+			packageProductDependencies = (
+			);
+			productName = USBToggleShared;
+			productReference = 50083D03C4B9F6ADF1C82DAB /* libUSBToggleShared.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C6AD93082198D6A6083ECBC3 /* USBToggleHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C794CDBE86F9C29DFC7E69C7 /* Build configuration list for PBXNativeTarget "USBToggleHelper" */;
+			buildPhases = (
+				E7794DF2211F48E21193A707 /* Sources */,
+				A0D7B1B57500783FCCB9A02E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9381417D37F9EFDFE93D08C0 /* PBXTargetDependency */,
+			);
+			name = USBToggleHelper;
+			packageProductDependencies = (
+			);
+			productName = USBToggleHelper;
+			productReference = B4731DD6C15A95654FF2AA9A /* USBToggleHelper */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		80AAE10B3E0643D4C32F6DA0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					06B0EBDA24A678A9648A53FA = {
+						ProvisioningStyle = Automatic;
+					};
+					083BB46C35571CD6BCC0A3B1 = {
+						ProvisioningStyle = Automatic;
+					};
+					5ED7FEB918FE9DA0D1ABDB18 = {
+						ProvisioningStyle = Automatic;
+					};
+					65B84EC0089BDAAB840E02BE = {
+						ProvisioningStyle = Automatic;
+					};
+					ADE239B4B399BB3486B5678C = {
+						ProvisioningStyle = Automatic;
+					};
+					C6AD93082198D6A6083ECBC3 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 4C848BE14F9379F227ADE3BE /* Build configuration list for PBXProject "USBToggle" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 12BF466AB87809A68547111F;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				06B0EBDA24A678A9648A53FA /* AppTests */,
+				083BB46C35571CD6BCC0A3B1 /* HelperTests */,
+				5ED7FEB918FE9DA0D1ABDB18 /* SharedTests */,
+				65B84EC0089BDAAB840E02BE /* USBToggleApp */,
+				C6AD93082198D6A6083ECBC3 /* USBToggleHelper */,
+				ADE239B4B399BB3486B5678C /* USBToggleShared */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5891EE8FBA47818CFD105066 /* Embed Helper and LaunchDaemon */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/USBToggleHelper",
+				"$(PROJECT_DIR)/LaunchDaemons/com.parker.usbtoggle.helper.plist",
+			);
+			name = "Embed Helper and LaunchDaemon";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(TARGET_BUILD_DIR)/$(FULL_PRODUCT_NAME)/Contents/Library/HelperTools/USBToggleHelper",
+				"$(TARGET_BUILD_DIR)/$(FULL_PRODUCT_NAME)/Contents/Library/LaunchDaemons/com.parker.usbtoggle.helper.plist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -euo pipefail\nAPP_BUNDLE=\"$TARGET_BUILD_DIR/$FULL_PRODUCT_NAME\"\nHELPER_DST=\"$APP_BUNDLE/Contents/Library/HelperTools\"\nDAEMON_DST=\"$APP_BUNDLE/Contents/Library/LaunchDaemons\"\nmkdir -p \"$HELPER_DST\" \"$DAEMON_DST\"\ncp \"$BUILT_PRODUCTS_DIR/USBToggleHelper\" \"$HELPER_DST/USBToggleHelper\"\nchmod 755 \"$HELPER_DST/USBToggleHelper\"\ncp \"$PROJECT_DIR/LaunchDaemons/com.parker.usbtoggle.helper.plist\" \"$DAEMON_DST/com.parker.usbtoggle.helper.plist\"\n/usr/bin/plutil -lint \"$DAEMON_DST/com.parker.usbtoggle.helper.plist\"\n";
+		};
+		F15320960106D28306FC1DB9 /* Copy Swift Objective-C Interface Header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(DERIVED_SOURCES_DIR)/$(SWIFT_OBJC_INTERFACE_HEADER_NAME)",
+			);
+			name = "Copy Swift Objective-C Interface Header";
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/include/$(PRODUCT_MODULE_NAME)/$(SWIFT_OBJC_INTERFACE_HEADER_NAME)",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "ditto \"${SCRIPT_INPUT_FILE_0}\" \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0D4380EEF659A21B097A2433 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CA152415C3E43839CE17985 /* AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1679EC82B0F10087ABC01C9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F19BFEA0F2EF2C97DA5E178E /* SharedTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F1606CD4718746440E7E667 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DAB8F29F8B277A0A319FF4E /* AppMenuView.swift in Sources */,
+				9202EFABBA50AF1D90A181B2 /* HelperInstaller.swift in Sources */,
+				ABA3746106381DAC3451EC25 /* USBToggleApp.swift in Sources */,
+				E161F1FC4E45DCBAE603DF36 /* USBToggleHelperClient.swift in Sources */,
+				B1AF411801B484519F94AF36 /* USBToggleViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98EAB804C0426B49DDDECA37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE41A6FC414D8567E48B26A0 /* HelperTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4F70516F008BB3D5536D85D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B856105FFBB4B5E30F9B1B17 /* ToggleResultDTO.swift in Sources */,
+				5A6803B27AA20864BB837B42 /* USBDeviceSnapshotDTO.swift in Sources */,
+				C30E7523B6A6DE37462AA211 /* USBPolicy.swift in Sources */,
+				0AE2F150BC54C85B8E053DDF /* USBRiskClass.swift in Sources */,
+				E931BAC77BE71AADF73F4800 /* USBToggleConstants.swift in Sources */,
+				BF70B35E777FD520E22F26E5 /* USBToggleErrorCode.swift in Sources */,
+				C9A02E50535953EA563CD218 /* USBToggleHelperXPC.swift in Sources */,
+				E1A11B31AE7DBD42C284842B /* XPCInterfaceFactory.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7794DF2211F48E21193A707 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C13C61C30CEFE59ACD18C95E /* HelperXPCListenerDelegate.swift in Sources */,
+				C087ED88760F61FAA29A1D91 /* USBDeviceManager.swift in Sources */,
+				57D755E8CA37B35607854E63 /* USBDeviceRecord.swift in Sources */,
+				0DB5C96B380BB0E2DFB815D7 /* USBLowLevel.c in Sources */,
+				BB2C9A36AAB2EA3087B0543A /* USBToggleHelperService.swift in Sources */,
+				7FE50FC0B0BC5B22F3BD5DE7 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2614F72DA570FD1A7AF76753 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ADE239B4B399BB3486B5678C /* USBToggleShared */;
+			targetProxy = 8B075670C090C5B8C92C73D7 /* PBXContainerItemProxy */;
+		};
+		4087C71D7F6238BE15EFD119 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ADE239B4B399BB3486B5678C /* USBToggleShared */;
+			targetProxy = C285105D4C296257673FAA57 /* PBXContainerItemProxy */;
+		};
+		826B0F6734BDF26EF1C63655 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ADE239B4B399BB3486B5678C /* USBToggleShared */;
+			targetProxy = D15A04E76326D465062246CD /* PBXContainerItemProxy */;
+		};
+		9381417D37F9EFDFE93D08C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ADE239B4B399BB3486B5678C /* USBToggleShared */;
+			targetProxy = 4F36D512FEC6B021610F40BC /* PBXContainerItemProxy */;
+		};
+		A409D18F40051CE1679F81DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ADE239B4B399BB3486B5678C /* USBToggleShared */;
+			targetProxy = 6BCC3072AE5D665514A1D561 /* PBXContainerItemProxy */;
+		};
+		C25BC519D1733104D5A4196D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C6AD93082198D6A6083ECBC3 /* USBToggleHelper */;
+			targetProxy = 231809A6BB509D846386F4D3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3510ECD2AD316E715B4A96F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		359A6F91AD29478D81A87C86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		57366206C741BBECE47ADD9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		663C367753771169D72BC40A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.parker.usbtoggle;
+				PRODUCT_MODULE_NAME = USBToggleApp;
+				PRODUCT_NAME = "USB Toggle";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		7CD25B6F87B84D9DBEEA3245 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		7DDB5B42C170704B6414DA0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Helper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				OTHER_CODE_SIGN_FLAGS = "--identifier com.parker.usbtoggle.helper";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.parker.usbtoggle.helper;
+				PRODUCT_NAME = USBToggleHelper;
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = Helper/BridgingHeader.h;
+			};
+			name = Release;
+		};
+		9C78AB3270D2468980D21EE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				SDKROOT = macosx;
+				TEST_HOST = "";
+			};
+			name = Release;
+		};
+		A7B0A8C21D0833C2C1317090 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.parker.usbtoggle.shared;
+				PRODUCT_NAME = USBToggleShared;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		BD3CC1DB320972700F45B6B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.parker.usbtoggle;
+				PRODUCT_MODULE_NAME = USBToggleApp;
+				PRODUCT_NAME = "USB Toggle";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C19BD8ED5B70F4D79DFA9FD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		D9F161B33C81FBBF33947CD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Helper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				OTHER_CODE_SIGN_FLAGS = "--identifier com.parker.usbtoggle.helper";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.parker.usbtoggle.helper;
+				PRODUCT_NAME = USBToggleHelper;
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = Helper/BridgingHeader.h;
+			};
+			name = Debug;
+		};
+		DF8AEFAC8804A861E933831E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.parker.usbtoggle.shared;
+				PRODUCT_NAME = USBToggleShared;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F00EA6A0A6409F00B083E5CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				SDKROOT = macosx;
+				TEST_HOST = "";
+			};
+			name = Debug;
+		};
+		FB3D02F2ED2A10E4CD4AB9B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E779C8779D58A2158531AF3 /* Build configuration list for PBXNativeTarget "USBToggleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				663C367753771169D72BC40A /* Debug */,
+				BD3CC1DB320972700F45B6B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4C848BE14F9379F227ADE3BE /* Build configuration list for PBXProject "USBToggle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57366206C741BBECE47ADD9E /* Debug */,
+				C19BD8ED5B70F4D79DFA9FD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		93893009C90275CE0981CCF4 /* Build configuration list for PBXNativeTarget "SharedTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB3D02F2ED2A10E4CD4AB9B3 /* Debug */,
+				3510ECD2AD316E715B4A96F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		949B1218DF2277CBA1C3424D /* Build configuration list for PBXNativeTarget "AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F00EA6A0A6409F00B083E5CB /* Debug */,
+				9C78AB3270D2468980D21EE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		BA5E8D28A160766CE98FCF0B /* Build configuration list for PBXNativeTarget "HelperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CD25B6F87B84D9DBEEA3245 /* Debug */,
+				359A6F91AD29478D81A87C86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C794CDBE86F9C29DFC7E69C7 /* Build configuration list for PBXNativeTarget "USBToggleHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9F161B33C81FBBF33947CD7 /* Debug */,
+				7DDB5B42C170704B6414DA0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F6F8C64A149D1003F6B470A9 /* Build configuration list for PBXNativeTarget "USBToggleShared" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF8AEFAC8804A861E933831E /* Debug */,
+				A7B0A8C21D0833C2C1317090 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 80AAE10B3E0643D4C32F6DA0 /* Project object */;
+}
